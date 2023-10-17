@@ -1,0 +1,27 @@
+import math
+
+def square_pyramid_volume(base_side_length, height):
+    # Calculate the volume of a square pyramid
+    volume = (1/3) * (base_side_length**2) * height
+    return volume
+
+def square_pyramid_surface_area(base_side_length, slant_height):
+    # Calculate the surface area of a square pyramid
+    base_area = base_side_length**2
+    triangular_face_area = 0.5 * base_side_length * slant_height
+    surface_area = base_area + 4 * triangular_face_area
+    return surface_area
+
+# Input values
+base_side_length = float(input("Enter the length of one side of the square base: "))
+height = float(input("Enter the height of the pyramid: "))
+
+# Calculate the slant height
+slant_height = math.sqrt((base_side_length / 2)**2 + height**2)
+
+# Calculate and print the volume and surface area
+volume = square_pyramid_volume(base_side_length, height)
+surface_area = square_pyramid_surface_area(base_side_length, slant_height)
+
+print(f"Volume of the square pyramid: {volume}")
+print(f"Surface area of the square pyramid: {surface_area}")
