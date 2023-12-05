@@ -1,0 +1,24 @@
+def calculate_power(base, exponent):
+    result = 1
+
+    if exponent >= 0:
+        for _ in range(exponent):
+            result *= base
+    else:
+        for _ in range(-exponent):
+            result /= base
+
+    return result
+
+
+# Get those inputs
+base = float(input("Enter the base: "))
+exponent = int(input("Enter the exponent: "))
+
+
+# getting the answers
+result = calculate_power(base, exponent)
+
+
+# Display the answer
+print(f"{base}^{exponent} =", result)

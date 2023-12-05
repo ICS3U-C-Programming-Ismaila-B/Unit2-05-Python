@@ -1,0 +1,10 @@
+# Get input from the user
+length = float(input("Enter the length of the rectangular prism: "))
+width = float(input("Enter the width of the rectangular prism: "))
+height = float(input("Enter the height of the rectangular prism: "))
+
+# Calculate surface area
+surface_area = 2 * (length * width + length * height + width * height)
+
+# Display the result
+print(f"The surface area of the rectangular prism is {surface_area} square units.")
